@@ -1,0 +1,19 @@
+# <[Screen Name]>: <-- Makes a screen
+# remember to Indent
+<MainScreen>:
+    GridLayout:  # Gridlayout is the type of area where we have our widgets
+        cols: 1 # VERY IMPORTANT make sure you make sure every
+        #Grid has columns.
+       # we have our widgets
+        GridLayout:  # controls the screen
+            cols: 1
+            Label: # A widget labels other widgets
+                text: "What is your name"
+            TextInput:
+                hint_text: "Name?"
+            Button:
+                text: "Next"
+<RootWidget>: # Invisible widget that keeps record of all the
+             # Screens of the app
+    MainScreen:
+        name: "screen_main" # Name of screen for backend purposes.

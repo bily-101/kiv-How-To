@@ -1,0 +1,32 @@
+<MainScreen>:
+    GridLayout:
+        cols: 1
+        GridLayout:
+            cols: 1
+            Label:
+                text: "What is your name"
+            TextInput:
+                hint_text: "Name?"
+                id: name # Takes the name and stores it in an id
+            Button:
+                text: "Next"
+                on_press: root.next_page() # Commands when pressed
+                on_press: root.get_name(root.ids.name)                      # To execute the next button
+
+<FinalScreen>:
+    GridLayout:
+        cols: 1
+        GridLayout:
+            cols: 1
+            Label:
+                id: namee # controls the text on the text widget below
+                text: ""
+            Button:
+                text: "Name"
+                on_press: root.show_name() # when the button is pressed it will open the name file and read it
+
+<RootWidget>:
+    MainScreen:
+        name: "screen_main"
+    FinalScreen:
+        name: "final_page" # authorizing the second Screen
